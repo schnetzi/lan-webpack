@@ -1,0 +1,23 @@
+@use "variables" as *;
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "button";
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: rgba(8, 3, 37, 0.9);
+  color: #ffffff;
+}
+
+a {
+  cursor: pointer;
+  transition: 0.3s color ease;
+
+  &:hover {
+    color: $primary-pink;
+  }
+}
