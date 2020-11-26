@@ -1,8 +1,14 @@
 {
-  "extends": "stylelint-config-recommended-scss",
-  "ignoreFiles": ["dist/**/*.css"],
-  "rules": {
-    "indentation": "tab",
-    "number-leading-zero": null
-  }
+	"extends": "stylelint-config-recommended-scss",
+	"ignoreFiles": ["dist/**/*.css"],
+	"rules": {
+		"at-rule-no-unknown": [
+			true,
+			{
+				"ignoreAtRules": ["tailwind"]
+			}
+		],
+		"indentation": "tab",
+		"number-leading-zero": null
+	}
 }
