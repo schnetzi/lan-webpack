@@ -29,7 +29,9 @@
     "eslint-config-prettier": "^6.15.0",
     "eslint-plugin-import": "^2.22.1",
     "html-webpack-plugin": "^4.5.0",
+    "husky": "^4.3.0",
     "jshint": "^2.12.0",
+    "lint-staged": "^10.5.2",
     "postcss": "^8.1.10",
     "postcss-loader": "^4.1.0",
     "prettier": "^2.2.0",
@@ -45,5 +47,15 @@
     "webpack-cli": "^4.2.0",
     "webpack-dev-server": "^3.11.0"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.ts": "eslint --cache --fix",
+    "*.scss": "stylelint --fix",
+    "*.{ts,scss,md}": "prettier --write"
+  }
 }
