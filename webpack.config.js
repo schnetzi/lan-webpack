@@ -6,7 +6,7 @@ module.exports = {
   mode: "development",
   entry: {
     index: "./src/index",
-    countdown: "./src/views/countdown",
+    countdown: "./src/views/countdown/countdown",
   },
   resolve: {
     extensions: [".ts", ".tsx", ".js", ".json"],
@@ -20,7 +20,7 @@ module.exports = {
     new HtmlWebpackPlugin(), // index.html
     new HtmlWebpackPlugin({
       filename: "countdown.html",
-      template: "src/views/countdown.html",
+      template: "src/views/countdown/countdown.html",
     }),
   ],
   output: {
