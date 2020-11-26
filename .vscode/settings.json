@@ -2,5 +2,8 @@
 	"css.lint.unknownAtRules": "ignore",
 	"tailwindCSS.includeLanguages": {
 		"plaintext": "html"
+	},
+	"eslint.options": {
+		"ignorePattern": "webpack.config.js"
 	}
 }
