@@ -1,23 +1,26 @@
 @use "variables" as *;
 
+// import of tailwind styles
+/* stylelint-disable */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* stylelint-enable */
 
-@import "button";
+@import 'button';
 
 body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: rgba(8, 3, 37, 0.9);
-  color: #ffffff;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background-color: rgba(8, 3, 37, 0.9);
+	color: #ffffff;
 }
 
 a {
-  cursor: pointer;
-  transition: 0.3s color ease;
+	cursor: pointer;
+	transition: 0.3s color ease;
 
-  &:hover {
-    color: $primary-pink;
-  }
+	&:hover {
+		color: $primary-pink;
+	}
 }
