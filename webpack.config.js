@@ -7,6 +7,7 @@ module.exports = {
   entry: {
     index: "./src/index",
     countdown: "./src/views/countdown/countdown",
+    article: "./src/views/article/article",
   },
   resolve: {
     extensions: [".ts", ".tsx", ".js", ".json"],
@@ -21,6 +22,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: "countdown.html",
       template: "src/views/countdown/countdown.html",
+    }),
+    new HtmlWebpackPlugin({
+      filename: "article.html",
+      template: "src/views/article/article.html",
     }),
   ],
   output: {
