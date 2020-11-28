@@ -1,21 +1,20 @@
 import './countdown.scss';
 
-const testDate = new Date(Date.now());
-testDate.setFullYear(testDate.getFullYear() + 1);
-
-const dateInSeconds = Math.floor(new Date(testDate).getTime() / 1000);
-let dateDifferenceSeconds = 0;
-
-const $days = document.querySelector('.js-days');
-const $hours = document.querySelector('.js-hours');
-const $minutes = document.querySelector('.js-minutes');
-const $seconds = document.querySelector('.js-seconds');
+interface CountdownDomElements {
+	$days: HTMLElement | null;
+	$hours: HTMLElement | null;
+	$minutes: HTMLElement | null;
+	$seconds: HTMLElement | null;
+}
 
 function formatClockNumber(number: number): string {
 	return number > 9 ? number.toString() : `0${number.toString()}`;
 }
 
-function replaceDomValues(dateDiff: number) {
+function replaceDomValues(
+	dateDiff: number,
+	countdownDomElements: CountdownDomElements
+) {
 	const daysAsNumber = Math.floor(dateDiff / 60 / 60 / 24);
 
 	const remainingHourTime = dateDiff - daysAsNumber * 60 * 60 * 24;
@@ -32,35 +31,92 @@ function replaceDomValues(dateDiff: number) {
 		minutesAsNumber * 60;
 	const secondsAsNumber = Math.floor(remainingSecondTime);
 
-	if ($days) {
-		$days.innerHTML = formatClockNumber(daysAsNumber).toString();
+	// eslint can be disabled for the assignments because dom-elements are passed
+	// by reference and can therefore be edited
+	if (countdownDomElements.$days) {
+		// eslint-disable-next-line no-param-reassign
+		countdownDomElements.$days.innerHTML = formatClockNumber(
+			daysAsNumber
+		).toString();
 	}
 
-	if ($hours) {
-		$hours.innerHTML = formatClockNumber(hoursAsNumber).toString();
+	if (countdownDomElements.$hours) {
+		// eslint-disable-next-line no-param-reassign
+		countdownDomElements.$hours.innerHTML = formatClockNumber(
+			hoursAsNumber
+		).toString();
 	}
 
-	if ($minutes) {
-		$minutes.innerHTML = formatClockNumber(minutesAsNumber).toString();
+	if (countdownDomElements.$minutes) {
+		// eslint-disable-next-line no-param-reassign
+		countdownDomElements.$minutes.innerHTML = formatClockNumber(
+			minutesAsNumber
+		).toString();
 	}
 
-	if ($seconds) {
-		$seconds.innerHTML = formatClockNumber(secondsAsNumber).toString();
+	if (countdownDomElements.$seconds) {
+		// eslint-disable-next-line no-param-reassign
+		countdownDomElements.$seconds.innerHTML = formatClockNumber(
+			secondsAsNumber
+		).toString();
 	}
 }
 
-function countdownTimer(): void {
+function countdownTimer(
+	dateInSeconds: number,
+	countdownDomElements: CountdownDomElements
+): void {
 	const currentDate = new Date(Date.now());
 	const currentDateSeconds = Math.floor(currentDate.getTime() / 1000);
-	dateDifferenceSeconds = dateInSeconds - currentDateSeconds;
+	const dateDifferenceSeconds = dateInSeconds - currentDateSeconds;
 
 	if (dateDifferenceSeconds > 0) {
-		replaceDomValues(dateDifferenceSeconds);
+		replaceDomValues(dateDifferenceSeconds, countdownDomElements);
 
 		setTimeout(() => {
-			countdownTimer();
+			countdownTimer(dateInSeconds, countdownDomElements);
 		}, 1000);
 	}
 }
 
-countdownTimer();
+function isValidDate(dateObject: any): boolean {
+	return new Date(dateObject).toString() !== 'Invalid Date';
+}
+
+const countdowns = document.querySelectorAll('.js-countdown');
+
+countdowns.forEach((countdown) => {
+	if (!(countdown instanceof HTMLElement)) {
+		console.error(`'js-countdown' must be set on HTMLElement`);
+
+		return;
+	}
+
+	const endDateString = countdown.dataset.endDate;
+	if (!endDateString) {
+		console.error(
+			`'data-end-date' attribute missing or empty on 'js-countdown' element`
+		);
+		return;
+	}
+
+	const endDate = new Date(parseInt(endDateString, 10));
+
+	if (!isValidDate(endDate)) {
+		console.error(
+			`The date "${endDateString}" doesn't transform to a valid date.`
+		);
+		return;
+	}
+
+	const dateInSeconds = Math.floor(new Date(endDate).getTime() / 1000);
+
+	const countdownDomElements: CountdownDomElements = {
+		$days: countdown.querySelector('.js-days'),
+		$hours: countdown.querySelector('.js-hours'),
+		$minutes: countdown.querySelector('.js-minutes'),
+		$seconds: countdown.querySelector('.js-seconds'),
+	};
+
+	countdownTimer(dateInSeconds, countdownDomElements);
+});
