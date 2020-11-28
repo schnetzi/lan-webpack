@@ -4,6 +4,7 @@
   "description": "",
   "private": true,
   "scripts": {
+		"lint": "eslint src/**/*.ts --fix",
     "build": "webpack",
     "watch": "webpack --watch",
     "start": "webpack serve --open 'Google Chrome'",

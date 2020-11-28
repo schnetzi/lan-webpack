@@ -97,6 +97,7 @@ countdowns.forEach((countdown) => {
 		console.error(
 			`'data-end-date' attribute missing or empty on 'js-countdown' element`
 		);
+
 		return;
 	}
 
@@ -106,6 +107,7 @@ countdowns.forEach((countdown) => {
 		console.error(
 			`The date "${endDateString}" doesn't transform to a valid date.`
 		);
+
 		return;
 	}
 
