@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Poll</title>
+</head>
+
+<body class="p-10">
+
+	<div
+		class="flex flex-col justify-center rounded-lg shadow-xl p-5 max-w-4xl mx-auto bg-gray-700">
+		<h2 class="text-3xl text-center">Food</h2>
+		<p class="">Wähle eine Antwort</p>
+		<div class="flex flex-col mt-3">
+			<label class="inline-flex items-center mt-3">
+				<input type="radio" class="form-radio h-5 w-5 text-teal-600" name="food"
+					value="tortilla" checked>
+				<span class="ml-2">Tortilla</span>
+			</label>
+
+			<label class="inline-flex items-center mt-3">
+				<input type="radio" class="form-radio h-5 w-5 text-teal-600" name="food"
+					value="pizza">
+				<span class="ml-2">Pizza</span>
+			</label>
+
+			<label class="inline-flex items-center mt-3">
+				<input type="radio" class="form-radio h-5 w-5 text-teal-600" name="food"
+					value="toast">
+				<span class="ml-2">Toast</span>
+			</label>
+		</div>
+		<div
+			class="mt-5 py-2 px-2 rounded-md text-red-700 bg-red-200 border border-red-300 ">
+			<div class="max-w-full">
+				Du hast bereits an dieser Abstimmung teilgenommen.
+			</div>
+		</div>
+		<div class="sm:flex mt-8 justify-between">
+			<button>Abstimmen</button>
+			<button class="sm:ml-5 sm:mt-0 mt-3">Ergebnisse</button>
+		</div>
+	</div>
+</body>
+
+</html>

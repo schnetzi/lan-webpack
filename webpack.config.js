@@ -9,11 +9,12 @@ module.exports = {
 		countdown: './src/views/countdown/countdown',
 		article: './src/views/article/article',
 		login: './src/views/login/login',
+		poll: './src/views/poll/poll',
 	},
 	resolve: {
 		extensions: ['.ts', '.tsx', '.js', '.json'],
 	},
-	devtool: 'inline-source-map',
+	devtool: 'eval-cheap-module-source-map',
 	devServer: {
 		contentBase: './dist',
 	},
@@ -31,6 +32,10 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			filename: 'login.html',
 			template: 'src/views/login/login.html',
+		}),
+		new HtmlWebpackPlugin({
+			filename: 'poll.html',
+			template: 'src/views/poll/poll.html',
 		}),
 	],
 	output: {
