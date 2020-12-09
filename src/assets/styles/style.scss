@@ -21,6 +21,14 @@ a {
 	transition: 0.3s color ease;
 
 	&:hover {
-		color: $primary-pink;
+		color: $color-primary-pink;
 	}
+}
+
+header {
+	background-color: $color-layout-background;
+}
+
+footer {
+	background-color: $color-layout-background;
 }
