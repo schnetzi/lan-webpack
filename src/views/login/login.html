@@ -7,30 +7,61 @@
 	<title>Login</title>
 </head>
 
-<body>
+<body class="flex flex-col min-h-screen items-center">
+	<header class="px-10 py-10 flex justify-between fixed w-full">
+		<nav>
+			<a href="#" class="px-3 py-10">LOGO</a>
+			<a href="#" class="px-3 py-10">Home</a>
+			<a href="#" class="px-3 py-10 border-white border-b-2">Active page</a>
+		</nav>
+		<div>
+			User-Menu
+		</div>
+	</header>
+	<main
+		class="flex-grow mt-32 flex text-center flex-col items-center max-w-2xl px-3 sm:px-0">
+		<h1 class="uppercase text-5xl mt-10">Pichi's LAN</h1>
 
-	<form id="login" class="css-login p-8 text-center sm:max-w-md mx-auto mt-10">
-		<h1 class="text-white text-4xl uppercase">Login</h1>
-		<label class="block my-8">
-			E-Mail-Adresse
-			<div class="relative block">
-				<input
-					class="relative block appearance-none w-full py-2 px-3 mt-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-					placeholder="E-Mail-Adresse" type="email" />
-			</div>
-		</label>
+		<p class="mt-10 leading-8">
+			Bitte logge dich ein um alle Features zu nutzen. <br>Hinweis: Aktuell
+			basiert die Webseite auf einem Invite-only Prinzip. Das heißt nur
+			eingeladene Nutzer können sich anmelden.
+		</p>
 
-		<label class="block my-8">
-			Passwort
-			<div class="relative block">
-				<input
-					class="relative block appearance-none w-full py-2 px-3 mt-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-					placeholder="Passwort" type="password" />
-			</div>
-		</label>
+		<form id="login" class="css-login p-8 w-full sm:w-3/4">
+			<label class="block my-8">
+				E-Mail-Adresse
+				<div class="relative block">
+					<input
+						class="relative block appearance-none w-full py-2 px-3 mt-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+						placeholder="E-Mail-Adresse" type="email" />
+				</div>
+			</label>
 
-		<button class="w-full">Login</button>
-	</form>
+			<label class="block my-8">
+				Passwort
+				<div class="relative block">
+					<input
+						class="relative block appearance-none w-full py-2 px-3 mt-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+						placeholder="Passwort" type="password" />
+				</div>
+			</label>
+
+			<button class="w-full">Login</button>
+
+			<a href="#" class="block mt-5">Passwort vergessen</a>
+		</form>
+	</main>
+	<footer class="px-10 py-10 flex justify-between w-full">
+		<div>
+			<!-- Please add the year via php <?php echo date("Y"); ?> -->
+			2020 &copy; Copyright Passioneight
+		</div>
+		<div>
+			<a class="px-3 py-2" href="/datenschutz">Datenschutz</a>
+			<a class="px-3 py-2" href="#">Impressum</a>
+		</div>
+	</footer>
 </body>
 
 </html>
