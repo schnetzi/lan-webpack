@@ -64,18 +64,21 @@ function replaceDomValues(
 
 function countdownTimer(
 	dateInSeconds: number,
-	countdownDomElements: CountdownDomElements
+	countdownDomElements: CountdownDomElements,
+	countdown: Element
 ): void {
 	const currentDate = new Date(Date.now());
 	const currentDateSeconds = Math.floor(currentDate.getTime() / 1000);
 	const dateDifferenceSeconds = dateInSeconds - currentDateSeconds;
 
-	if (dateDifferenceSeconds > 0) {
+	if (dateDifferenceSeconds >= 0) {
 		replaceDomValues(dateDifferenceSeconds, countdownDomElements);
 
 		setTimeout(() => {
-			countdownTimer(dateInSeconds, countdownDomElements);
+			countdownTimer(dateInSeconds, countdownDomElements, countdown);
 		}, 1000);
+	} else if (dateDifferenceSeconds === -1) {
+		countdown.classList.add('hidden', 'sm:hidden');
 	}
 }
 
@@ -120,5 +123,5 @@ countdowns.forEach((countdown) => {
 		$seconds: countdown.querySelector('.js-seconds'),
 	};
 
-	countdownTimer(dateInSeconds, countdownDomElements);
+	countdownTimer(dateInSeconds, countdownDomElements, countdown);
 });
