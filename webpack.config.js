@@ -10,6 +10,7 @@ module.exports = {
 		article: './src/views/article/article',
 		login: './src/views/login/login',
 		poll: './src/views/poll/poll',
+		layout: './src/views/layout/layout',
 	},
 	resolve: {
 		extensions: ['.ts', '.tsx', '.js', '.json'],
@@ -36,6 +37,10 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			filename: 'poll.html',
 			template: 'src/views/poll/poll.html',
+		}),
+		new HtmlWebpackPlugin({
+			filename: 'footer.html',
+			template: 'src/views/layout/layout.html',
 		}),
 	],
 	output: {
