@@ -11,6 +11,7 @@ module.exports = {
 		login: './src/views/login/login',
 		poll: './src/views/poll/poll',
 		layout: './src/views/layout/layout',
+		'layout-404': './src/views/layout-404/layout-404',
 	},
 	resolve: {
 		extensions: ['.ts', '.tsx', '.js', '.json'],
@@ -41,6 +42,10 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			filename: 'footer.html',
 			template: 'src/views/layout/layout.html',
+		}),
+		new HtmlWebpackPlugin({
+			filename: 'layout-404.html',
+			template: 'src/views/layout-404/layout-404.html',
 		}),
 	],
 	output: {
