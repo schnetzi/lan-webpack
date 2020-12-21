@@ -1,0 +1,14 @@
+@use "../../assets/styles/variables" as *;
+
+.css-articles {
+	img {
+		transform: skew(-7deg);
+	}
+
+	article {
+		&:hover {
+			opacity: 1;
+			color: $color-primary-white;
+		}
+	}
+}

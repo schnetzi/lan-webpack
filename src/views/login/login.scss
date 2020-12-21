@@ -1,3 +1,5 @@
+@use "../../assets/styles/variables" as *;
+
 .css-login {
 	input {
 		text-align: inherit;
@@ -25,7 +27,7 @@
 
 		&.focus::after {
 			color: #080325;
-			background-color: #ffffff;
+			background-color: $color-primary-white;
 		}
 	}
 }

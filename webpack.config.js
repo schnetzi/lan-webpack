@@ -8,6 +8,7 @@ module.exports = {
 		index: './src/index',
 		countdown: './src/views/countdown/countdown',
 		article: './src/views/article/article',
+		articles: './src/views/articles/articles',
 		login: './src/views/login/login',
 		poll: './src/views/poll/poll',
 		layout: './src/views/layout/layout',
@@ -32,6 +33,10 @@ module.exports = {
 			template: 'src/views/article/article.html',
 		}),
 		new HtmlWebpackPlugin({
+			filename: 'articles.html',
+			template: 'src/views/articles/articles.html',
+		}),
+		new HtmlWebpackPlugin({
 			filename: 'login.html',
 			template: 'src/views/login/login.html',
 		}),
@@ -40,7 +45,7 @@ module.exports = {
 			template: 'src/views/poll/poll.html',
 		}),
 		new HtmlWebpackPlugin({
-			filename: 'footer.html',
+			filename: 'layout.html',
 			template: 'src/views/layout/layout.html',
 		}),
 		new HtmlWebpackPlugin({
