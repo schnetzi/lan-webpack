@@ -12,3 +12,24 @@
 		}
 	}
 }
+
+.css-pagination {
+	button {
+		&:not(:last-child)::before {
+			border-right: none;
+		}
+	}
+
+	.css-active {
+		color: #fff;
+		text-decoration: none;
+		border: none;
+		outline: 0;
+		box-shadow: none;
+
+		&::before {
+			background-color: $color-primary-pink;
+			border: 2px solid $color-primary-pink;
+		}
+	}
+}
