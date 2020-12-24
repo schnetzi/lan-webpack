@@ -25,7 +25,8 @@ button {
 		z-index: -1;
 	}
 
-	&:hover {
+	&:hover,
+	&.css-active {
 		color: #fff;
 		text-decoration: none;
 		border: none;

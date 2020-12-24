@@ -6,5 +6,8 @@
 	"eslint.options": {
 		"ignorePattern": "webpack.config.js"
 	},
-	"css.customData": [".vscode/css_custom_data.json"]
+	"css.customData": [
+		".vscode/css_custom_data.json"
+	],
+	"editor.renameOnType": true
 }
