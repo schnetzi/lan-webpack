@@ -17,6 +17,7 @@ body {
 
 	> header {
 		background-color: $color-layout-background;
+		z-index: $z-index-header;
 	}
 
 	> footer {
