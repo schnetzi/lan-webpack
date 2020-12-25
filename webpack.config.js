@@ -1,18 +1,20 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
 	mode: 'development',
 	entry: {
-		index: './src/index',
-		countdown: './src/views/countdown/countdown',
 		article: './src/views/article/article',
 		articles: './src/views/articles/articles',
-		login: './src/views/login/login',
-		poll: './src/views/poll/poll',
+		countdown: './src/views/countdown/countdown',
+		index: './src/index',
 		layout: './src/views/layout/layout',
 		'layout-404': './src/views/layout-404/layout-404',
+		login: './src/views/login/login',
+		poll: './src/views/poll/poll',
+		profile: './src/views/profile/profile',
 	},
 	resolve: {
 		extensions: ['.ts', '.tsx', '.js', '.json'],
@@ -23,6 +25,9 @@ module.exports = {
 	},
 	plugins: [
 		new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
+		new CopyPlugin({
+			patterns: [{ from: 'src/assets/images', to: 'images' }],
+		}),
 		new HtmlWebpackPlugin(), // index.html
 		new HtmlWebpackPlugin({
 			filename: 'countdown.html',
@@ -52,6 +57,10 @@ module.exports = {
 			filename: 'layout-404.html',
 			template: 'src/views/layout-404/layout-404.html',
 		}),
+		new HtmlWebpackPlugin({
+			filename: 'profile.html',
+			template: 'src/views/profile/profile.html',
+		}),
 	],
 	output: {
 		filename: '[name].[contenthash].js',
@@ -71,6 +80,11 @@ module.exports = {
 	},
 	module: {
 		rules: [
+			{
+				//IMAGE LOADER
+				test: /\.(jpe?g|png|gif|svg)$/i,
+				loader: 'file-loader',
+			},
 			{
 				test: /\.(ts|js)x?$/,
 				exclude: /node_modules/,
