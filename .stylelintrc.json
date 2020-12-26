@@ -5,7 +5,7 @@
 		"at-rule-no-unknown": [
 			true,
 			{
-				"ignoreAtRules": ["tailwind", "use"]
+				"ignoreAtRules": ["tailwind", "use", "mixin", "include"]
 			}
 		],
 		"indentation": "tab",

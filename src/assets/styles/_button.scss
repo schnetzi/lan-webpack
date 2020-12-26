@@ -1,4 +1,5 @@
 @use "variables" as *;
+@use "mixins" as *;
 
 button {
 	position: relative;
@@ -13,6 +14,8 @@ button {
 	z-index: 10;
 
 	&::before {
+		@include skew;
+
 		content: '';
 		position: absolute;
 		top: 0;
@@ -21,7 +24,6 @@ button {
 		left: 0;
 		border: 2px solid #fff;
 		transition: 0.3s background-color ease, 0.3s border ease;
-		transform: skew(-7deg);
 		z-index: -1;
 	}
 

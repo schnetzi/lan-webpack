@@ -6,15 +6,7 @@ const CopyPlugin = require('copy-webpack-plugin');
 module.exports = {
 	mode: 'development',
 	entry: {
-		article: './src/views/article/article',
-		articles: './src/views/articles/articles',
-		countdown: './src/views/countdown/countdown',
 		index: './src/index',
-		layout: './src/views/layout/layout',
-		'layout-404': './src/views/layout-404/layout-404',
-		login: './src/views/login/login',
-		poll: './src/views/poll/poll',
-		profile: './src/views/profile/profile',
 	},
 	resolve: {
 		extensions: ['.ts', '.tsx', '.js', '.json'],

@@ -22,8 +22,23 @@
 
 	<main class="flex-grow mt-32 css-profile">
 
-		<header>
-			<img src="images/profile.jpg">
+		<header class="absolute top-0 left-0 ">
+			<img class="object-cover h-96 w-full" src="images/profile.jpg">
+			<section class="absolute bottom-10 left-10 flex">
+				<img class="object-cover w-36 h-44 css-profile__image"
+					src="http://www.placekitten.com/200/200">
+				<article class="ml-6 css-profile__info">
+					<h1 class="uppercase">User name</h1>
+					<p>office@passioneight.com</p>
+					<div>
+						<!-- This will be one count which can be used as often as wanted -->
+						<label>
+							<p>69</p>
+							<span>Participated</span>
+						</label>
+					</div>
+				</article>
+			</section>
 		</header>
 
 	</main>
