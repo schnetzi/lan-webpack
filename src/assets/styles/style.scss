@@ -12,10 +12,8 @@
 @import 'input';
 
 body {
-	@apply text-white;
+	@apply text-white antialiased;
 
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
 	background-color: $color-primary-blue-90;
 
 	> header {
@@ -29,8 +27,7 @@ body {
 }
 
 a {
-	cursor: pointer;
-	transition: 0.3s color ease;
+	@apply cursor-pointer transition-colors;
 
 	&:hover {
 		color: $color-primary-pink;

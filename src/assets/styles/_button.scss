@@ -2,42 +2,37 @@
 @use "mixins" as *;
 
 button {
-	position: relative;
-	padding: 10px 30px;
-	color: #fff;
-	border: none;
-	outline: 0;
-	box-shadow: none;
-	text-align: center;
-	cursor: pointer;
-	transition: 0.3s color ease;
-	z-index: 10;
+	@apply relative text-white outline-none shadow-none text-center cursor-pointer z-10 px-8 py-3 border-none transition-colors duration-300;
 
 	&::before {
 		@include skew;
+		@apply absolute top-0 right-0 bottom-0 left-0 border-2 border-solid border-white transition-colors duration-300;
 
 		content: '';
-		position: absolute;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		border: 2px solid #fff;
-		transition: 0.3s background-color ease, 0.3s border ease;
 		z-index: -1;
 	}
 
 	&:hover,
 	&.css-active {
-		color: #fff;
-		text-decoration: none;
-		border: none;
-		outline: 0;
-		box-shadow: none;
+		@apply text-white border-none outline-none shadow-none no-underline;
 
 		&::before {
 			background-color: $color-primary-pink;
-			border: 2px solid $color-primary-pink;
+			border-color: $color-primary-pink;
+		}
+	}
+
+	&.css-green {
+		@apply text-green-600;
+
+		&::before {
+			@apply border-green-600;
+		}
+
+		&:hover {
+			&::before {
+				@apply bg-white border-white;
+			}
 		}
 	}
 }
