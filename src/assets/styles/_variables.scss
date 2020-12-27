@@ -1,6 +1,8 @@
-$color-primary-white: #ffffff;
+@use 'sass:color';
+
 $color-primary-pink: #d92b4c;
 
-$color-layout-background: rgba(8, 3, 37, 0.9);
+$color-primary-blue: rgb(8, 3, 37);
 
-$z-index-header: 200;
+$color-primary-blue-90: color.adjust($color-primary-blue, $alpha: -0.1);
+$color-primary-blue-40: color.adjust($color-primary-blue, $alpha: -0.6);

@@ -12,18 +12,19 @@
 @import 'input';
 
 body {
+	@apply text-white;
+
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	background-color: rgba(8, 3, 37, 0.9);
-	color: #ffffff;
+	background-color: $color-primary-blue-90;
 
 	> header {
-		background-color: $color-layout-background;
-		z-index: $z-index-header;
+		@apply z-50;
+		background-color: $color-primary-blue-90;
 	}
 
 	> footer {
-		background-color: $color-layout-background;
+		background-color: $color-primary-blue-90;
 	}
 }
 
