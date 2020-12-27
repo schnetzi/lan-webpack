@@ -1,0 +1,34 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.css-input {
+	@apply relative w-full;
+
+	input {
+		@apply z-10 block relative appearance-none w-full py-2 px-3 text-gray-300 leading-tight;
+
+		background: none;
+		text-align: inherit;
+
+		&:focus {
+			@apply outline-none;
+		}
+	}
+
+	&::after {
+		@apply absolute z-0 top-0 right-0 bottom-0 left-0;
+		@include skew;
+
+		content: '';
+		background-color: rgba(255, 255, 255, 0.1);
+	}
+
+	&.focus {
+		&::after {
+			background-color: $color-primary-white;
+		}
+		input {
+			color: #080325;
+		}
+	}
+}
