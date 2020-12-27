@@ -1,14 +1,14 @@
 @use "../../assets/styles/variables" as *;
+@use "../../assets/styles/mixins" as *;
 
 .css-articles {
 	img {
-		transform: skew(-7deg);
+		@include skew;
 	}
 
 	article {
 		&:hover {
-			opacity: 1;
-			color: $color-primary-white;
+			@apply text-opacity-100 text-white;
 		}
 	}
 }
@@ -16,7 +16,7 @@
 .css-pagination {
 	button {
 		&:not(:last-child)::before {
-			border-right: none;
+			@apply border-r-0;
 		}
 	}
 }

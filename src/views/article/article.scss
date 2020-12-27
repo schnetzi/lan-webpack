@@ -1,5 +1,7 @@
+@use "../../assets/styles/mixins" as *;
+
 .css-article {
 	img {
-		transform: skew(-7deg);
+		@include skew;
 	}
 }
