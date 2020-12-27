@@ -2,6 +2,8 @@
 @use "../../assets/styles/mixins" as *;
 
 .css-profile {
+	@apply relative;
+
 	&__image {
 		@include skew;
 	}
@@ -15,8 +17,16 @@
 			right: 0;
 			bottom: 0;
 			left: 0;
-			content: ' ';
+			content: '';
 			background-color: rgba(8, 3, 37, 0.4);
+		}
+	}
+
+	&__activity {
+		label {
+			&:not(:first-of-type) {
+				@apply ml-2;
+			}
 		}
 	}
 }
