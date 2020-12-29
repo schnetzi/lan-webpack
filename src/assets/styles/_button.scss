@@ -23,13 +23,14 @@ button {
 	}
 
 	&.css-green {
-		@apply text-green-600;
+		@apply text-green-500;
 
 		&::before {
-			@apply border-green-600;
+			@apply border-green-500;
 		}
 
 		&:hover {
+			@apply text-green-600;
 			&::before {
 				@apply bg-white border-white;
 			}
