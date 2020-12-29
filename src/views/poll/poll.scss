@@ -1,1 +1,27 @@
 @use "../../assets/styles/variables" as *;
+
+.css-poll {
+	@apply flex flex-col justify-center rounded-lg shadow-xl p-5 sm:p-10 max-w-4xl mx-auto;
+
+	background-color: $color-primary-blue-90;
+
+	h2 {
+		@apply text-center;
+	}
+
+	& > label {
+		@apply inline-flex items-center cursor-pointer mt-10;
+
+		input {
+			@apply w-8 h-8 cursor-pointer;
+		}
+
+		span {
+			@apply ml-4 text-2xl;
+		}
+	}
+
+	button {
+		@apply mt-10;
+	}
+}
