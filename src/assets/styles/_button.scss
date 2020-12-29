@@ -17,8 +17,8 @@ button {
 		@apply text-white border-none outline-none shadow-none no-underline;
 
 		&::before {
-			background-color: $color-primary-pink;
-			border-color: $color-primary-pink;
+			background-color: $color-primary;
+			border-color: $color-primary;
 		}
 	}
 
