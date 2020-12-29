@@ -12,21 +12,37 @@
 @import 'input';
 
 body {
-	@apply text-white antialiased;
-
+	@apply text-white antialiased flex flex-col min-h-screen;
 	background-color: $color-primary-blue-90;
 
 	> header {
-		@apply z-50;
+		@apply z-50 px-10 py-10 flex justify-between fixed w-full h-24;
 		background-color: $color-primary-blue-90;
 
-		a {
-			@apply no-underline;
+		nav {
+			a {
+				@apply no-underline px-3 py-8;
+
+				&.css-active {
+					@apply border-white border-b-2;
+				}
+			}
 		}
 	}
 
+	> main {
+		@apply flex-grow mt-24;
+	}
+
 	> footer {
+		@apply px-10 py-10 flex justify-end;
 		background-color: $color-primary-blue-90;
+
+		/* stylelint-disable no-descending-specificity */
+		a {
+			/* stylelint-enable no-descending-specificity */
+			@apply px-3 py-2;
+		}
 	}
 }
 

@@ -7,19 +7,20 @@
 	<title>Login</title>
 </head>
 
-<body class="flex flex-col min-h-screen items-center">
-	<header class="px-10 py-10 flex justify-between fixed w-full">
+<body>
+	<header>
 		<nav>
-			<a href="#" class="px-3 py-10">LOGO</a>
-			<a href="#" class="px-3 py-10">Home</a>
-			<a href="#" class="px-3 py-10 border-white border-b-2">Active page</a>
+			<a href="#">LOGO</a>
+			<a href="#">Home</a>
+			<a href="#" class="css-active">Active page</a>
 		</nav>
 		<div>
 			User-Menu
 		</div>
 	</header>
+
 	<main
-		class="flex-grow mt-32 flex text-center flex-col items-center max-w-2xl px-3 sm:px-0">
+		class="flex text-center flex-col items-center max-w-2xl px-3 sm:px-0 mx-auto">
 		<h1 class="mt-10">Pichi's LAN</h1>
 
 		<p class="mt-10 leading-8">
@@ -46,15 +47,9 @@
 			<a href="#" class="block mt-5">Passwort vergessen</a>
 		</form>
 	</main>
-	<footer class="px-10 py-10 flex justify-between w-full">
-		<div>
-			<!-- Please add the year via php <?php echo date("Y"); ?> -->
-			2020 &copy; Copyright Passioneight
-		</div>
-		<div>
-			<a class="px-3 py-2" href="/datenschutz">Datenschutz</a>
-			<a class="px-3 py-2" href="#">Impressum</a>
-		</div>
+
+	<footer>
+		<a href="/datenschutz">Datenschutz</a>
 	</footer>
 </body>
 
