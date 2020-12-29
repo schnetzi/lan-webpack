@@ -25,3 +25,31 @@
 		@apply mt-10;
 	}
 }
+
+// This is a general styling for all progress-bars and can be put in styles.scss
+.css-progress {
+	@apply shadow w-full bg-gray-200 h-6 rounded-sm;
+
+	> div {
+		@apply text-xs leading-none py-1 text-center text-white h-full flex items-center justify-center rounded-sm;
+		background-color: $color-primary;
+	}
+}
+
+.css-pollResult {
+	@apply flex flex-col justify-center rounded-lg shadow-xl p-5 sm:p-10 max-w-4xl mx-auto;
+
+	background-color: $color-primary-blue-90;
+
+	label {
+		@apply flex mt-10;
+
+		span {
+			@apply flex-shrink-0 mr-5;
+		}
+	}
+
+	p {
+		@apply mt-10 font-bold;
+	}
+}
