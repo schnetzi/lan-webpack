@@ -19,6 +19,10 @@ body {
 	> header {
 		@apply z-50;
 		background-color: $color-primary-blue-90;
+
+		a {
+			@apply no-underline;
+		}
 	}
 
 	> footer {
@@ -26,8 +30,10 @@ body {
 	}
 }
 
+/* stylelint-disable no-descending-specificity */
 a {
-	@apply cursor-pointer transition-colors;
+	/* stylelint-enable no-descending-specificity */
+	@apply cursor-pointer transition-colors underline;
 
 	&:hover {
 		color: $color-primary-pink;
