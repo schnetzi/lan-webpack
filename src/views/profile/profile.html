@@ -7,12 +7,12 @@
 	<title>Profile</title>
 </head>
 
-<body class="flex flex-col min-h-screen">
-	<header class="px-10 py-10 flex justify-between fixed w-full">
+<body>
+	<header>
 		<nav>
-			<a href="#" class="px-3 py-10">LOGO</a>
-			<a href="#" class="px-3 py-10">Home</a>
-			<a href="#" class="px-3 py-10 border-white border-b-2">Active page</a>
+			<a href="#">LOGO</a>
+			<a href="#">Home</a>
+			<a href="#" class="css-active">Active page</a>
 		</nav>
 		<div>
 			User-Menu
@@ -20,19 +20,20 @@
 	</header>
 
 
-	<main class="flex-grow pt-24 css-profile">
+	<main class="css-profile">
 
-		<header class="mt-10 pb-28 sm:pb-16">
-			<img class="absolute top-0 left-0 object-cover h-96 w-full"
-				src="images/profile.jpg">
-			<section class="flex items-center ml-10">
-				<img class="object-cover w-28 h-36 sm:w-36 sm:h-44 css-profile__image"
+		<header>
+			<img class="object-cover h-64 w-full" src="images/profile.jpg">
+
+			<section class="absolute flex items-center top-14 sm:top-10 left-10">
+				<img class="css-profile__image"
 					src="http://www.placekitten.com/200/200">
-				<article class="relative css-profile__info px-8 py-2 sm:py-6">
+				<article class="css-profile__info">
 					<h1 class="relative text-2xl sm:text-4xl z-10">
 						User name
 					</h1>
-					<p class="text-sm sm:text-base mt-1">office@passioneight.com</p>
+					<p class="text-sm sm:text-base mt-1 relative z-10">
+						office@passioneight.com</p>
 					<div class="mt-4 flex justify-between css-profile__activity">
 						<!-- The label will be one count and can be used as often as wanted -->
 						<label class="relative z-10 block text-center">
@@ -101,11 +102,8 @@
 		</section>
 	</main>
 
-	<footer class="px-10 py-10 flex justify-between">
-		<div>
-			<!-- Please add the year via php <?php echo date("Y"); ?> -->
-			2020 &copy; Copyright Passioneight
-		</div>
+	<footer>
+		<a href="/datenschutz">Datenschutz</a>
 	</footer>
 </body>
 
