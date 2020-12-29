@@ -1,0 +1,13 @@
+@use "../../assets/styles/variables" as *;
+
+.css-info {
+	@apply mt-5 py-2 px-2 rounded-sm border;
+
+	&--alert {
+		@apply text-red-700 bg-red-200 border-red-300;
+	}
+
+	&--success {
+		@apply text-green-700 bg-green-100 border-green-300;
+	}
+}

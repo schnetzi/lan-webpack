@@ -53,6 +53,10 @@ module.exports = {
 			filename: 'profile.html',
 			template: 'src/views/profile/profile.html',
 		}),
+		new HtmlWebpackPlugin({
+			filename: 'info-box.html',
+			template: 'src/views/info-box/info-box.html',
+		}),
 	],
 	output: {
 		filename: '[name].[contenthash].js',

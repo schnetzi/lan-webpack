@@ -7,6 +7,7 @@ import './views/layout-404/layout-404.ts';
 import './views/login/login.ts';
 import './views/poll/poll.ts';
 import './views/profile/profile.ts';
+import './views/info-box/info-box.ts';
 
 // component styles
 
