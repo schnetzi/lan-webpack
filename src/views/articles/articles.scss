@@ -2,14 +2,31 @@
 @use "../../assets/styles/mixins" as *;
 
 .css-articles {
-	img {
+	$root: &;
+	@apply grid gap-y-12 grid-cols-1 sm:grid-cols-4 py-10;
+
+	&__link {
+		@apply px-5 flex w-full no-underline;
+
+		&:hover {
+			@apply text-white;
+
+			#{$root}__article {
+				@apply opacity-100 text-white;
+			}
+		}
+	}
+
+	&__meta {
+		@apply text-gray-500 text-sm text-center;
+	}
+
+	&__image {
 		@include skew;
 	}
 
-	article {
-		&:hover {
-			@apply text-opacity-100 text-white;
-		}
+	&__article {
+		@apply text-center text-white opacity-50 transition-opacity;
 	}
 }
 

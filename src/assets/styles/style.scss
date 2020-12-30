@@ -31,7 +31,7 @@ body {
 	}
 
 	> main {
-		@apply flex-grow mt-24 max-w-screen-xl mx-auto w-full;
+		@apply flex-grow mt-24 max-w-screen-xl mx-auto w-full py-10;
 	}
 
 	> footer {
@@ -54,4 +54,8 @@ a {
 	&:hover {
 		color: $color-primary;
 	}
+}
+
+hr {
+	@apply border-gray-500;
 }

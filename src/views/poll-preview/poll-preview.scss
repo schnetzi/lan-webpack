@@ -3,10 +3,7 @@
 
 .css-pollPreview {
 	$root: &;
-
-	&__grid {
-		@apply grid gap-y-12 grid-cols-1 sm:grid-cols-4 py-10;
-	}
+	@apply grid gap-y-12 grid-cols-1 sm:grid-cols-4 py-10;
 
 	&__link {
 		@apply px-5 flex w-full no-underline;
