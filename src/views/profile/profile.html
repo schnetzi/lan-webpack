@@ -20,86 +20,89 @@
 	</header>
 
 
-	<main class="css-profile">
+	<main>
 
-		<header>
-			<img class="object-cover h-64 w-full" src="images/profile.jpg">
+		<div class="css-profile">
 
-			<section class="absolute flex items-center top-14 sm:top-10 left-10">
-				<img class="css-profile__image"
-					src="http://www.placekitten.com/200/200">
-				<article class="css-profile__info">
-					<h1 class="relative text-2xl sm:text-4xl z-10">
-						User name
-					</h1>
-					<p class="text-sm sm:text-base mt-1 relative z-10">
-						office@passioneight.com</p>
-					<div class="mt-4 flex justify-between css-profile__activity">
-						<!-- The label will be one count and can be used as often as wanted -->
-						<label class="relative z-10 block text-center">
-							<p class="text-xl sm:text-2xl">69</p>
-							<span class="text-sm sm:text-base">Participated</span>
-						</label>
+			<header>
+				<img class="object-cover h-64 w-full" src="images/profile.jpg">
+
+				<section class="absolute flex items-center top-14 sm:top-10 left-10">
+					<img class="css-profile__image"
+						src="http://www.placekitten.com/200/200">
+					<article class="css-profile__info">
+						<h1 class="relative text-2xl sm:text-4xl z-10">
+							User name
+						</h1>
+						<p class="text-sm sm:text-base mt-1 relative z-10">
+							office@passioneight.com</p>
+						<div class="mt-4 flex justify-between css-profile__activity">
+							<!-- The label will be one count and can be used as often as wanted -->
+							<label class="relative z-10 block text-center">
+								<p class="text-xl sm:text-2xl">69</p>
+								<span class="text-sm sm:text-base">Participated</span>
+							</label>
+						</div>
+					</article>
+				</section>
+			</header>
+
+			<section class="my-10 max-w-5xl px-5 sm:px-10">
+				<h2>Change Password:</h2>
+				<form class="mt-6">
+
+					<label class="mb-8 items-center grid grid-cols-4 gap-3">
+						<span class="text-right">Current Password:</span>
+						<div class="css-input col-span-3">
+							<input type="password" />
+						</div>
+					</label>
+
+					<label class="mb-8 items-center grid grid-cols-4 gap-3">
+						<span class="text-right">New Password:</span>
+						<div class="css-input col-span-3">
+							<input type="password" />
+						</div>
+					</label>
+
+					<div class="grid grid-cols-4 gap-3">
+						<button class="col-start-2 col-end-5 sm:col-end-4 md:col-end-3"
+							type="submit">
+							Change Password
+						</button>
 					</div>
-				</article>
+
+				</form>
 			</section>
-		</header>
 
-		<section class="my-10 max-w-5xl px-5 sm:px-10">
-			<h2>Change Password:</h2>
-			<form class="mt-6">
+			<section class="my-10 max-w-5xl px-5 sm:px-10">
+				<h2>Email:</h2>
+				<form class="mt-6">
 
-				<label class="mb-8 items-center grid grid-cols-4 gap-3">
-					<span class="text-right">Current Password:</span>
-					<div class="css-input col-span-3">
-						<input type="password" />
+					<label class="mb-8 items-center grid grid-cols-4 gap-3">
+						<span class="text-right">Current Email:</span>
+						<p class="col-span-3">
+							nk******@gmail.com
+						</p>
+					</label>
+
+					<label class="mb-8 items-center grid grid-cols-4 gap-3">
+						<span class="text-right">New Email:</span>
+						<div class="css-input col-span-3">
+							<input placeholder="new@email.com" type="email" />
+						</div>
+					</label>
+
+					<div class="grid grid-cols-4 gap-3">
+						<button class="col-start-2 col-end-5 sm:col-end-4 md:col-end-3"
+							type="submit">
+							Change Email
+						</button>
 					</div>
-				</label>
 
-				<label class="mb-8 items-center grid grid-cols-4 gap-3">
-					<span class="text-right">New Password:</span>
-					<div class="css-input col-span-3">
-						<input type="password" />
-					</div>
-				</label>
-
-				<div class="grid grid-cols-4 gap-3">
-					<button class="col-start-2 col-end-5 sm:col-end-4 md:col-end-3"
-						type="submit">
-						Change Password
-					</button>
-				</div>
-
-			</form>
-		</section>
-
-		<section class="my-10 max-w-5xl px-5 sm:px-10">
-			<h2>Email:</h2>
-			<form class="mt-6">
-
-				<label class="mb-8 items-center grid grid-cols-4 gap-3">
-					<span class="text-right">Current Email:</span>
-					<p class="col-span-3">
-						nk******@gmail.com
-					</p>
-				</label>
-
-				<label class="mb-8 items-center grid grid-cols-4 gap-3">
-					<span class="text-right">New Email:</span>
-					<div class="css-input col-span-3">
-						<input placeholder="new@email.com" type="email" />
-					</div>
-				</label>
-
-				<div class="grid grid-cols-4 gap-3">
-					<button class="col-start-2 col-end-5 sm:col-end-4 md:col-end-3"
-						type="submit">
-						Change Email
-					</button>
-				</div>
-
-			</form>
-		</section>
+				</form>
+			</section>
+		</div>
 	</main>
 
 	<footer>
