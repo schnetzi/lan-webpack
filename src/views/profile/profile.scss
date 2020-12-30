@@ -10,7 +10,7 @@
 	}
 
 	&__info {
-		@apply relative px-8 py-2 sm:py-6;
+		@apply relative px-8 py-2 sm:py-6 h-36 sm:h-44;
 
 		&::after {
 			@include tiltedBackground($color-primary-blue-90);
