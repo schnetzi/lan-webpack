@@ -1,6 +1,6 @@
 @use "variables" as *;
 
-@mixin skew($degree: -7deg) {
+@mixin skew($degree: $skew-degree) {
 	transform: skew($degree);
 }
 
