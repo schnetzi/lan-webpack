@@ -18,7 +18,11 @@
 	}
 
 	&__meta {
-		@apply text-gray-500 text-sm text-center;
+		@apply text-gray-500 text-sm text-center flex items-center justify-center;
+
+		time {
+			@apply ml-2;
+		}
 	}
 
 	&__image {
@@ -33,7 +37,7 @@
 .css-pagination {
 	@apply flex ml-5 my-5;
 
-	button {
+	.button {
 		&:not(:last-child)::before {
 			@apply border-r-0;
 		}

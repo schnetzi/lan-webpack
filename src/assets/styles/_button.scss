@@ -1,7 +1,12 @@
 @use "variables" as *;
 @use "mixins" as *;
 
-button {
+a.button {
+	@apply no-underline;
+}
+
+button,
+.button {
 	@apply relative text-white outline-none shadow-none text-center cursor-pointer z-10 px-8 py-3 border-none transition-colors duration-300;
 
 	&::before {
