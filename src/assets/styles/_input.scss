@@ -5,7 +5,7 @@
 	@apply relative w-full;
 
 	input {
-		@apply z-10 block relative appearance-none w-full py-2 px-3 text-gray-300 leading-tight;
+		@apply z-10 block relative appearance-none w-full py-2 px-3 text-gray-300 leading-tight border-none;
 
 		background: none;
 		text-align: inherit;
