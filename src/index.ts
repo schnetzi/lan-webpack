@@ -8,6 +8,7 @@ import './views/login/login.ts';
 import './views/poll/poll.ts';
 import './views/profile/profile.ts';
 import './views/info-box/info-box.ts';
+import './views/poll-preview/poll-preview.ts';
 
 // component styles
 

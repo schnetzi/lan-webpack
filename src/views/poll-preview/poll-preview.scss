@@ -1,0 +1,45 @@
+@use "../../assets/styles/variables" as *;
+@use "../../assets/styles/mixins" as *;
+
+.css-pollPreview {
+	$root: &;
+
+	&__grid {
+		@apply grid gap-y-12 grid-cols-1 sm:grid-cols-4 py-10;
+	}
+
+	&__link {
+		@apply px-5 flex w-full no-underline;
+
+		&:hover {
+			@apply text-white;
+
+			#{$root}__poll {
+				@apply opacity-100 text-white;
+			}
+		}
+	}
+
+	&__poll {
+		@apply text-center text-white opacity-50 transition-opacity flex flex-col justify-between w-full;
+
+		&--new {
+			#{$root}__options {
+				@apply flex justify-center items-center text-7xl font-bold uppercase;
+
+				background-color: $color-primary;
+			}
+		}
+	}
+
+	&__options {
+		@apply w-full max-h-40 overflow-hidden h-full;
+		@include skew;
+
+		background-color: $color-primary-blue-40;
+	}
+
+	&__option {
+		@apply block pointer-events-none mt-1;
+	}
+}
