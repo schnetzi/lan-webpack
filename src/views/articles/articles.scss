@@ -31,6 +31,8 @@
 }
 
 .css-pagination {
+	@apply flex ml-5 my-5;
+
 	button {
 		&:not(:last-child)::before {
 			@apply border-r-0;
