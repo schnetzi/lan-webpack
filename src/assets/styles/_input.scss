@@ -34,10 +34,10 @@
 }
 
 input[type='radio'] {
-	@apply form-radio h-5 w-5 text-blue-500;
+	@apply h-5 w-5 text-blue-500;
 }
 
 input[type='checkbox'] {
 	@include skew;
-	@apply form-checkbox h-5 w-5 text-blue-500;
+	@apply h-5 w-5 text-blue-500;
 }
