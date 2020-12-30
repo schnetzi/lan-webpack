@@ -16,6 +16,12 @@
 
 			#{$root}__poll {
 				@apply opacity-100 text-white;
+
+				&--new {
+					h2 {
+						color: $color-primary;
+					}
+				}
 			}
 		}
 	}
@@ -24,6 +30,8 @@
 		@apply text-center text-white opacity-50 transition-opacity flex flex-col justify-between w-full;
 
 		&--new {
+			@apply opacity-100;
+
 			#{$root}__options {
 				@apply flex justify-center items-center text-7xl font-bold uppercase;
 
