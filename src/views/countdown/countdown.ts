@@ -104,7 +104,7 @@ countdowns.forEach((countdown) => {
 		return;
 	}
 
-	const endDate = new Date(parseInt(endDateString, 10));
+	const endDate = new Date(endDateString);
 
 	if (!isValidDate(endDate)) {
 		console.error(
