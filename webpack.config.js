@@ -65,6 +65,10 @@ module.exports = {
 			filename: 'table.html',
 			template: 'src/views/table/table.html',
 		}),
+		new HtmlWebpackPlugin({
+			filename: 'hero.html',
+			template: 'src/views/hero/hero.html',
+		}),
 	],
 	output: {
 		filename: '[name].[contenthash].js',

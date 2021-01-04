@@ -1,0 +1,17 @@
+@use "../../assets/styles/variables" as *;
+@use "../../assets/styles/mixins" as *;
+
+.css-hero {
+	@apply w-screen -mt-10 flex;
+	margin-left: calc(50% - 50vw);
+
+	img {
+		@apply object-cover h-64 w-full;
+	}
+
+	&__element {
+		@apply absolute mt-32 max-w-screen-xl w-full flex;
+		left: 50%;
+		transform: translateX(-50%) translateY(-50%);
+	}
+}
