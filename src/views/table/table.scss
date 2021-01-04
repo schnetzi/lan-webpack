@@ -1,0 +1,22 @@
+@use "../../assets/styles/variables" as *;
+
+.css-table {
+	@apply table-auto;
+
+	thead tr {
+		@apply border-b-2 border-gray-600;
+	}
+
+	th,
+	td {
+		@apply p-2 border border-gray-700;
+	}
+
+	tbody {
+		tr {
+			&:nth-child(2n) {
+				background-color: $color-primary-blue-40;
+			}
+		}
+	}
+}

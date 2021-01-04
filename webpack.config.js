@@ -61,6 +61,10 @@ module.exports = {
 			filename: 'poll-preview.html',
 			template: 'src/views/poll-preview/poll-preview.html',
 		}),
+		new HtmlWebpackPlugin({
+			filename: 'table.html',
+			template: 'src/views/table/table.html',
+		}),
 	],
 	output: {
 		filename: '[name].[contenthash].js',
