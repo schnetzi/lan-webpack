@@ -10,6 +10,7 @@
 @import 'button';
 @import 'font';
 @import 'input';
+@import 'utilities';
 
 body {
 	@apply text-white antialiased flex flex-col min-h-screen;
