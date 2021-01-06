@@ -69,6 +69,10 @@ module.exports = {
 			filename: 'hero.html',
 			template: 'src/views/hero/hero.html',
 		}),
+		new HtmlWebpackPlugin({
+			filename: 'ajax.html',
+			template: 'src/views/ajax/ajax.html',
+		}),
 	],
 	output: {
 		filename: '[name].[contenthash].js',

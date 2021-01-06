@@ -52,7 +52,10 @@
     "webpack-cli": "^4.3.0",
     "webpack-dev-server": "^3.11.1"
   },
-  "dependencies": {},
+  "dependencies": {
+    "axios": "^0.21.1",
+    "regenerator-runtime": "^0.13.7"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"

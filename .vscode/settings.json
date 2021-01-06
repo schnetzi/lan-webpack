@@ -8,5 +8,10 @@
 	},
 	"css.customData": [".vscode/css_custom_data.json"],
 	"scss.validate": false,
-	"editor.linkedEditing": true
+	"editor.linkedEditing": true,
+	"editor.formatOnSave": false,
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": true
+	},
+	"eslint.validate": ["javascript", "typescript"]
 }
