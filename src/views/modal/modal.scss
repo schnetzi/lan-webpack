@@ -1,0 +1,61 @@
+@use "../../assets/styles/variables" as *;
+
+.css-modal {
+	@apply hidden fixed z-50 inset-0 overflow-y-auto;
+
+	&--open {
+		@apply block;
+	}
+
+	&__header {
+		@apply mt-3 text-center sm:mt-0 sm:text-left flex justify-between;
+	}
+
+	&__closeButton {
+		@apply text-gray-900 bg-transparent border-0 no-underline;
+
+		&::before {
+			content: '\2715';
+		}
+	}
+
+	&__title {
+		@apply text-lg leading-6 font-medium text-gray-900
+	}
+
+	&__content {
+		@apply text-sm text-gray-500 mt-2;
+	}
+
+	&__footer {
+		@apply bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse;
+
+		button {
+			@apply mt-3 sm:ml-3 sm:mt-0;
+		}
+	}
+
+	&__fullSize {
+		@apply flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0;
+	}
+
+	&__overlay {
+		@apply inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full;
+	}
+
+	&__dialog {
+		@apply bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4;
+	}
+
+	&__backdrop {
+		@apply fixed inset-0 transition-opacity ease-out duration-300;
+	}
+
+	&__backdropInner {
+		@apply absolute inset-0 bg-gray-500 opacity-75;
+	}
+
+	&__centerTrick {
+		@apply hidden sm:inline-block sm:align-middle sm:h-screen;
+	}
+}

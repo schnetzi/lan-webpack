@@ -27,6 +27,10 @@ button,
 		}
 	}
 
+	&:focus {
+		@apply outline-none;
+	}
+
 	&.css-green {
 		@apply text-green-500;
 
@@ -38,6 +42,32 @@ button,
 			@apply text-green-600;
 			&::before {
 				@apply bg-white border-white;
+			}
+		}
+	}
+
+	&.css-error {
+		&::before {
+			@apply border-red-500 bg-red-500;
+		}
+
+		&:hover {
+			&::before {
+				@apply bg-red-700 border-red-700;
+			}
+		}
+	}
+
+	&.css-gray {
+		@apply text-gray-700;
+
+		&::before {
+			@apply border-gray-700 bg-gray-50;
+		}
+
+		&:hover {
+			&::before {
+				@apply bg-gray-200 border-gray-800;
 			}
 		}
 	}

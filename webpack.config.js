@@ -73,6 +73,10 @@ module.exports = {
 			filename: 'ajax.html',
 			template: 'src/views/ajax/ajax.html',
 		}),
+		new HtmlWebpackPlugin({
+			filename: 'modal.html',
+			template: 'src/views/modal/modal.html',
+		}),
 	],
 	output: {
 		filename: '[name].[contenthash].js',

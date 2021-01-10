@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Profile</title>
+	</head>
+
+	<body>
+		<header>
+			<nav>
+				<a href="#">LOGO</a>
+				<a href="#">Home</a>
+				<a href="#" class="css-active">Active page</a>
+			</nav>
+			<div>User-Menu</div>
+		</header>
+
+		<main>
+			<header class="css-hero">
+				<img src="images/profile.jpg" />
+
+				<h1 class="css-hero__element">This is my headline</h1>
+			</header>
+
+			<!-- the trigger must be the same as the id from the modal -->
+			<button data-modal-open="modal-1">Open Modal</button>
+
+			<!-- [1] -->
+			<div id="modal-1" aria-hidden="true" class="css-modal">
+				<div
+					class="css-modal__fullSize"
+				>
+					<div class="css-modal__backdrop" aria-hidden="true">
+						<!-- Add/remove data-modal-close if click on background should/shouldn't close modal -->
+						<div class="css-modal__backdropInner" data-modal-close></div>
+					</div>
+
+					<!-- This element is to trick the browser into centering the modal contents. -->
+					<span
+						class="css-modal__centerTrick"
+						aria-hidden="true"
+					>
+						&#8203;
+					</span>
+
+					<!-- [2] -->
+					<div
+						tabindex="-1"
+						class="css-modal__overlay"
+					>
+						<!-- [3] -->
+						<div
+							role="dialog"
+							aria-modal="true"
+							aria-labelledby="modal-1-title"
+							class="css-modal__dialog"
+						>
+							<header class="css-modal__header">
+								<h2 id="modal-1-title" class="css-modal__title">
+									Modal Title
+								</h2>
+
+								<!-- [4] -->
+								<a class="css-modal__closeButton" aria-label="Close modal" data-modal-close></a>
+							</header>
+
+							<div id="modal-1-content" class="css-modal__content">
+								Modal Content
+							</div>
+
+							<footer class="css-modal__footer">
+								<!-- This references again the modal id -->
+								<button type="button" class="css-error" data-modal-close="modal-1">
+									Deactivate
+								</button>
+								<button type="button" class="css-gray" data-modal-close="modal-1">
+									Cancel
+								</button>
+							</footer>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<footer>
+			<a href="/datenschutz">Datenschutz</a>
+		</footer>
+	</body>
+</html>

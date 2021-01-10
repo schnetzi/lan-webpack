@@ -12,6 +12,7 @@ import './views/poll-preview/poll-preview.ts';
 import './views/table/table.ts';
 import './views/hero/hero.ts';
 import './views/ajax/ajax.ts';
+import './views/modal/modal.ts';
 
 // component styles
 
