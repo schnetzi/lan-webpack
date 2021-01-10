@@ -28,27 +28,19 @@
 
 			<!-- [1] -->
 			<div id="modal-1" aria-hidden="true" class="css-modal">
-				<div
-					class="css-modal__fullSize"
-				>
+				<div class="css-modal__fullSize">
 					<div class="css-modal__backdrop" aria-hidden="true">
 						<!-- Add/remove data-modal-close if click on background should/shouldn't close modal -->
 						<div class="css-modal__backdropInner" data-modal-close></div>
 					</div>
 
 					<!-- This element is to trick the browser into centering the modal contents. -->
-					<span
-						class="css-modal__centerTrick"
-						aria-hidden="true"
-					>
+					<span class="css-modal__centerTrick" aria-hidden="true">
 						&#8203;
 					</span>
 
 					<!-- [2] -->
-					<div
-						tabindex="-1"
-						class="css-modal__overlay"
-					>
+					<div tabindex="-1" class="css-modal__overlay">
 						<!-- [3] -->
 						<div
 							role="dialog"
@@ -57,24 +49,59 @@
 							class="css-modal__dialog"
 						>
 							<header class="css-modal__header">
-								<h2 id="modal-1-title" class="css-modal__title">
-									Modal Title
-								</h2>
+								<h2 id="modal-1-title" class="css-modal__title">Food</h2>
 
 								<!-- [4] -->
-								<a class="css-modal__closeButton" aria-label="Close modal" data-modal-close></a>
+								<a
+									class="css-modal__closeButton"
+									aria-label="Close modal"
+									data-modal-close
+								></a>
 							</header>
 
 							<div id="modal-1-content" class="css-modal__content">
-								Modal Content
+								<div class="css-pollResult">
+									<label>
+										<!-- I know there is a progress bar element but it's horrible to style -->
+										<span>Tortilla (5)</span>
+										<div class="css-progress">
+											<div style="width: 45%">45%</div>
+										</div>
+									</label>
+
+									<label>
+										<!-- I know there is a progress bar element but it's horrible to style -->
+										<span>Pizza (4)</span>
+										<div class="css-progress">
+											<div style="width: 36%">36%</div>
+										</div>
+									</label>
+
+									<label>
+										<!-- I know there is a progress bar element but it's horrible to style -->
+										<span>Toast (2)</span>
+										<div class="css-progress">
+											<div style="width: 18%">18%</div>
+										</div>
+									</label>
+									<p>Gesamt 11 Stimmen</p>
+								</div>
 							</div>
 
 							<footer class="css-modal__footer">
 								<!-- This references again the modal id -->
-								<button type="button" class="css-error" data-modal-close="modal-1">
+								<button
+									type="button"
+									class="css-error"
+									data-modal-close="modal-1"
+								>
 									Deactivate
 								</button>
-								<button type="button" class="css-gray" data-modal-close="modal-1">
+								<button
+									type="button"
+									class="css-gray"
+									data-modal-close="modal-1"
+								>
 									Cancel
 								</button>
 							</footer>
