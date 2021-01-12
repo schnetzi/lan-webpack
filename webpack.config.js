@@ -77,6 +77,10 @@ module.exports = {
 			filename: 'modal.html',
 			template: 'src/views/modal/modal.html',
 		}),
+		new HtmlWebpackPlugin({
+			filename: 'timeline.html',
+			template: 'src/views/timeline/timeline.html',
+		}),
 	],
 	output: {
 		filename: '[name].[contenthash].js',

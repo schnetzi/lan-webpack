@@ -13,6 +13,7 @@ import './views/table/table.ts';
 import './views/hero/hero.ts';
 import './views/ajax/ajax.ts';
 import './views/modal/modal.ts';
+import './views/timeline/timeline.ts';
 
 // component styles
 
