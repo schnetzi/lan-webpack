@@ -10,3 +10,5 @@ $color-primary-blue-40: color.adjust($color-primary-blue, $alpha: -0.6);
 $color-primary-white: theme('colors.white');
 
 $skew-degree: -7deg;
+
+$screen-sm: theme('screens.sm');
